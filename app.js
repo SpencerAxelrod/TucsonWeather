@@ -1,6 +1,7 @@
 window.addEventListener('load', ()=> {
-    let long;
+    let lon;
     let lat;
+    let key = config.OPENWEATHER_KEY;
 
     if(navigator.geolocation){
 
@@ -11,8 +12,17 @@ window.addEventListener('load', ()=> {
         };
 
         function success(pos) {
-            long = pos.coords.longitude;
+            lon = pos.coords.longitude;
             lat = pos.coords.latitude;
+
+            const openweather = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${key}`
+            fetch(openweather)
+                .then(response =>{
+                    return response.json();
+                })
+                .then(data => {
+                    console.log(data);
+                });
         }
 
         function error(err) {
@@ -20,5 +30,7 @@ window.addEventListener('load', ()=> {
         }
 
         navigator.geolocation.getCurrentPosition(success, error, options);
+        
+        
     }
 });
