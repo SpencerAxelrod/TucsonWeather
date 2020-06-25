@@ -11,24 +11,45 @@ body {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    background: linear-gradient(rgb(47, 150, 163), rgb(48, 62, 143));
+    /* background: linear-gradient( rgb(48, 62, 143), rgb(47, 150, 163)); */
     font-family: sans-serif;
-    color: white;
+    /* color: white; */
 }
 
-.location,
-.temperature {
+.catalina-mountains {
     outline: dashed skyblue;
     border: dashed red;
-    height: 30vh;
-    width: 50%;
+    height: 40vh;
+    width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
-.temperature {
-    flex-direction: column;
+.city-of-tucson {
+    outline: dashed skyblue;
+    border: dashed red;
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+}
+
+.tucson-title {
+    outline: dashed skyblue;
+    border: dashed red;
+}
+
+.weather-icon-p {
+    outline: dashed skyblue;
+    border: dashed red;
+}
+
+.tucson-title {
+    outline: dashed skyblue;
+    border: dashed red;
 }
 
 .temperature-degree_div {
@@ -48,4 +69,9 @@ body {
     border: dashed red;
     margin: 10px;
     font-size: 30px;
+}
+
+.temperature-description {
+    outline: dashed skyblue;
+    border: dashed red;
 }
